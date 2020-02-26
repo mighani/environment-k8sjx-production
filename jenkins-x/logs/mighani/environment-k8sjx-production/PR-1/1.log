@@ -1,0 +1,40 @@
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9hglf[0m
+{"level":"warn","ts":1582733996.087639,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582733996.088273,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k4r9q[0m
+{"level":"warn","ts":1582733997.1140578,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582733997.1156316,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-mighani-environment-k8sjx-produ-jd5dz-ltbtr[0m
+{"level":"warn","ts":1582734002.2278507,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582734003.9961774,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-k8s**-production.git @ master in path /workspace/source"}
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c289db92c0a3c0a32371b39f175cc3a0c8f84d4d,1:021c223aa3bbc04bb000ee8bbea9dcc5938c165f
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 021c223aa3bbc04bb000ee8bbea9dcc5938c165f: c289db92c0a3c0a32371b39f175cc3a0c8f84d4d:
+DEBUG: ran git fetch --unshallow origin 021c223aa3bbc04bb000ee8bbea9dcc5938c165f: c289db92c0a3c0a32371b39f175cc3a0c8f84d4d: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard c289db92c0a3c0a32371b39f175cc3a0c8f84d4d
+DEBUG: ran git reset --hard c289db92c0a3c0a32371b39f175cc3a0c8f84d4d in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge 021c223aa3bbc04bb000ee8bbea9dcc5938c165f
+DEBUG: ran git merge 021c223aa3bbc04bb000ee8bbea9dcc5938c165f in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e c289db92c0a3c0a32371b39f175cc3a0c8f84d4d..HEAD
+Merged SHA 021c223aa3bbc04bb000ee8bbea9dcc5938c165f with commit message 'chore: Promote **spring to version 0.0.1' into base branch master
+
+Showing logs for build [32mmighani-environment-k8sjx-produ-jd5dz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
